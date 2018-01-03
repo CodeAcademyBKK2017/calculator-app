@@ -19,10 +19,18 @@ export default class BaseApp extends Component {
   }
 
   _setFirstnum = (num) => {
+    if (num === '') {
+      this.setState({Firstnum: ''});
+      return;
+    }
     const realNum = parseFloat(num);
     !(isNaN(realNum)) && this.setState({Firstnum: realNum});
   }
   _setSecondnum = (num) => {
+    if (num === '') {
+      this.setState({Secondnum: ''});
+      return;
+    }
     const realNum = parseFloat(num);
     !(isNaN(realNum)) && this.setState({Secondnum: realNum});
   }

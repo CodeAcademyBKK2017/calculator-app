@@ -29,11 +29,15 @@ describe('App', () => {
   it('BaseView: setFirstnum must set in state', () => {
     instance._setFirstnum(1);
     expect(instance.state.Firstnum).toEqual(1);
+    instance._setFirstnum('');
+    expect(instance.state.Firstnum).toEqual('');
   });
 
   it('BaseView: setSecondnum must set in state', () => {
     instance._setSecondnum(1);
     expect(instance.state.Secondnum).toEqual(1);
+    instance._setSecondnum('');
+    expect(instance.state.Secondnum).toEqual('');
   });
 
   it('BaseView: clearResultFunc must clear result state', () => {
