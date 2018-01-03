@@ -35,26 +35,45 @@ export default class Index extends Component {
     isNumeric = (n) => !isNaN(parseFloat(n)) && isFinite(n)
     calResult = (oper) => () => {
       if (this.isNumeric(this.state.inputFirst) && this.isNumeric(this.state.inputSecond)) {
-        if (oper === '+') {
-          const result = (parseFloat(this.state.inputFirst) + parseFloat(this.state.inputSecond));
-          this.setState({result: result});
-        } else if (oper === '-') {
-          const result = (parseFloat(this.state.inputFirst) - parseFloat(this.state.inputSecond));
-          this.setState({result: result});
-        } else if (oper === '*') {
-          const result = (parseFloat(this.state.inputFirst) * parseFloat(this.state.inputSecond));
-          this.setState({result: result});
-        } else if (oper === '/') {
-          const result = (parseFloat(this.state.inputFirst) / parseFloat(this.state.inputSecond));
-          this.setState({result: result});
-        } else {
-          console.log('Operator Error');
+        // if (oper === '+') {
+        //   const result = (parseFloat(this.state.inputFirst) + parseFloat(this.state.inputSecond));
+        //   this.setState({result: result});
+        // } else if (oper === '-') {
+        //   const result = (parseFloat(this.state.inputFirst) - parseFloat(this.state.inputSecond));
+        //   this.setState({result: result});
+        // } else if (oper === '*') {
+        //   const result = (parseFloat(this.state.inputFirst) * parseFloat(this.state.inputSecond));
+        //   this.setState({result: result});
+        // } else if (oper === '/') {
+        //   const result = (parseFloat(this.state.inputFirst) / parseFloat(this.state.inputSecond));
+        //   this.setState({result: result});
+        // } else {
+        //   console.log('Operator Error');
+        // }
+        let result = 0;
+        switch (oper) {
+        case '+':
+          result = (parseFloat(this.state.inputFirst) + parseFloat(this.state.inputSecond));
+          break;
+        case '-':
+          result = (parseFloat(this.state.inputFirst) - parseFloat(this.state.inputSecond));
+          break;
+        case '*':
+          result = (parseFloat(this.state.inputFirst) * parseFloat(this.state.inputSecond));
+          break;
+        case '/':
+          result = (parseFloat(this.state.inputFirst) / parseFloat(this.state.inputSecond));
+          break;
+        default:
+          result = '';
+          break;
         }
+        this.setState({result: result});
       } else {
         this.setState({
-          inputFirst: 0,
-          inputSecond: 0,
-          result: 0
+          inputFirst: '',
+          inputSecond: '',
+          result: ''
         });
       }
     }
