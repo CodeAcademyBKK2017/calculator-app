@@ -11,16 +11,19 @@ import {
 export default class OperButton extends Component {
   render () {
     return (
-      <Touchable
-        style={styles.containerTouch}
-        background={Touchable.Ripple('orange')}
-        onPress={this.props.onButtonPress}>
-        <View style={styles.containerView}>
-          <Text style={styles.title}>
-            {this.props.title}
-          </Text>
-        </View>
-      </Touchable>
+      <View style={styles.containerRoot}>
+        <Touchable
+          style={styles.containerTouch}
+          background={Touchable.Ripple('orange', true)}
+          onPress={this.props.onButtonPress}>
+          <View style={styles.containerView}>
+            <Text style={styles.title}>
+              {this.props.title}
+            </Text>
+          </View>
+        </Touchable>
+      </View>
+      
     );
   }
 }

@@ -3,6 +3,9 @@ import {
 } from 'react-native';
 
 const styles = StyleSheet.create({
+  containerRoot: {
+    borderRadius: 10
+  },
   containerTouch: {
     backgroundColor: '#F3FAB6',
     borderColor: 'gray',
