@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import OperInput from './app/components/OperInput';
 import OperButton from './app/components/OperButton';
 import Result from './app/components/Result';
+import styles from './App.style';
 import {
   Platform,
   StyleSheet,
@@ -66,21 +67,4 @@ export default class App extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+
