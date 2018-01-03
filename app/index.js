@@ -21,16 +21,7 @@ export default class App extends Component {
   reset=() => {
     this.setState(this.initialstate);
   }
-  add = () => {
-    let sum = 0;
-    sum = parseInt(this.state.value1) + parseInt(this.state.value2);
-    this.setState({result: sum});
-  }
-  subtract = () => {
-    let sum = 0;
-    sum = parseInt(this.state.value1) - parseInt(this.state.value2);
-    this.setState({result: sum});
-  }
+  
   operation =(oper) => () => {
     let result;
     const value1 = parseFloat(this.state.value1);
@@ -40,13 +31,13 @@ export default class App extends Component {
       result = value1 + value2;
       break;
     case '-':
-      result = value1 + value2;
+      result = value1 - value2;
       break;
     case '*':
-      result = value1 + value2;
+      result = value1 * value2;
       break;
     case '÷':
-      result = value1 + value2;
+      result = value1 / value2;
       break;
     default:
       break;
@@ -67,8 +58,8 @@ export default class App extends Component {
         <View style={styles.operatorBox} >
           <OperButton name={'+'} onClick={this.operation('+')}/>
           <OperButton name={'-'} onClick={this.operation('-')}/>
-          <OperButton name={'*'} />
-          <OperButton name={'÷'} />
+          <OperButton name={'*'} onClick={this.operation('*')}/>
+          <OperButton name={'÷'} onClick={this.operation('÷')}/>
         </View>
         <View style={styles.reset}>
           <OperButton name={'Reset'} onClick={this.reset}/>
