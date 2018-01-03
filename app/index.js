@@ -31,25 +31,29 @@ export default class App extends Component {
     sum = parseInt(this.state.value1) - parseInt(this.state.value2);
     this.setState({result: sum});
   }
-  operation =(oper)=>(){
+  operation =(oper) => () => {
+    let result;
     const value1 = parseFloat(this.state.value1);
     const value2 = parseFloat(this.state.value2);
-    let result = 0;
     switch (oper) {
-      case '+':
-      result = value1+value2
-        break;
-      case '-':
-        result = value1+value2
-      case '*':
-        result = value1+value2
-      case '÷':
-        result = value1+value2
-      default:
-        break;
+    case '+':
+      result = value1 + value2;
+      break;
+    case '-':
+      result = value1 + value2;
+      break;
+    case '*':
+      result = value1 + value2;
+      break;
+    case '÷':
+      result = value1 + value2;
+      break;
+    default:
+      break;
     }
+    this.setState({result: result});
   }
-//Please use
+  // Please use
   render () {
     return (
       <View style={styles.container}>
