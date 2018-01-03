@@ -31,7 +31,25 @@ export default class App extends Component {
     sum = parseInt(this.state.value1) - parseInt(this.state.value2);
     this.setState({result: sum});
   }
-
+  operation =(oper)=>(){
+    const value1 = parseFloat(this.state.value1);
+    const value2 = parseFloat(this.state.value2);
+    let result = 0;
+    switch (oper) {
+      case '+':
+      result = value1+value2
+        break;
+      case '-':
+        result = value1+value2
+      case '*':
+        result = value1+value2
+      case '÷':
+        result = value1+value2
+      default:
+        break;
+    }
+  }
+//Please use
   render () {
     return (
       <View style={styles.container}>
@@ -43,8 +61,8 @@ export default class App extends Component {
           {this.state.result > 0 ?  <Result result={this.state.result} /> : null}
         </View>
         <View style={styles.operatorBox} >
-          <OperButton name={'+'} onClick={this.add}/>
-          <OperButton name={'-'} onClick={this.subtract}/>
+          <OperButton name={'+'} onClick={this.operation('+')}/>
+          <OperButton name={'-'} onClick={this.operation('-')}/>
           <OperButton name={'*'} />
           <OperButton name={'÷'} />
         </View>
