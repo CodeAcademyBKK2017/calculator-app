@@ -4,27 +4,16 @@ import {
 	View, 
 	Text 
 } from 'react-native';
+import StylesResult from './Result.style';
 
 export default class Result extends Component {
 	render() {
 		const props = this.props;
 		return (
-			<View style={styles.container}>
+			<View style={StylesResult.container}>
 				<Text>Result</Text>
-				<Text style={styles.resultStyle}>{this.props.result}</Text>
+				<Text style={StylesResult.resultStyle}>{this.props.result}</Text>
 			</View>
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
-	resultStyle: {
-		fontSize: 60,
-		marginTop: 20,
-		marginBottom: 20
-	},
-});
