@@ -38,20 +38,26 @@ export default class Index extends Component {
     isNumeric = (n) => !isNaN(parseFloat(n)) && isFinite(n)
     calResult = (oper) => () => {
       if (this.isNumeric(this.state.inputFirst) && this.isNumeric(this.state.inputSecond)) {
-        if (oper === '+') {
-          const result = (parseFloat(this.state.inputFirst) + parseFloat(this.state.inputSecond));
+        let result = 0;
+        switch (oper) {
+        case '+':
+          result = (parseFloat(this.state.inputFirst) + parseFloat(this.state.inputSecond));
           this.setState({result: result});
-        } else if (oper === '-') {
-          const result = (parseFloat(this.state.inputFirst) - parseFloat(this.state.inputSecond));
+          break;
+        case '-':
+          result = (parseFloat(this.state.inputFirst) - parseFloat(this.state.inputSecond));
           this.setState({result: result});
-        } else if (oper === '*') {
-          const result = (parseFloat(this.state.inputFirst) * parseFloat(this.state.inputSecond));
+          break;
+        case '/':
+          result = (parseFloat(this.state.inputFirst) / parseFloat(this.state.inputSecond));
           this.setState({result: result});
-        } else if (oper === '/') {
-          const result = (parseFloat(this.state.inputFirst) / parseFloat(this.state.inputSecond));
+          break;
+        case '*':
+          result = (parseFloat(this.state.inputFirst) * parseFloat(this.state.inputSecond));
           this.setState({result: result});
-        } else {
-          console.log('Operator Error');
+          break;
+        default:
+          this.setState({inputFirst: 0, inputSecond: 0, result: 0});
         }
       } else {
         this.setState({
@@ -60,6 +66,29 @@ export default class Index extends Component {
           result: 0
         });
       }
+    //   if (this.isNumeric(this.state.inputFirst) && this.isNumeric(this.state.inputSecond)) {
+    //     if (oper === '+') {
+    //       const result = (parseFloat(this.state.inputFirst) + parseFloat(this.state.inputSecond));
+    //       this.setState({result: result});
+    //     } else if (oper === '-') {
+    //       const result = (parseFloat(this.state.inputFirst) - parseFloat(this.state.inputSecond));
+    //       this.setState({result: result});
+    //     } else if (oper === '*') {
+    //       const result = (parseFloat(this.state.inputFirst) * parseFloat(this.state.inputSecond));
+    //       this.setState({result: result});
+    //     } else if (oper === '/') {
+    //       const result = (parseFloat(this.state.inputFirst) / parseFloat(this.state.inputSecond));
+    //       this.setState({result: result});
+    //     } else {
+    //       console.log('Operator Error');
+    //     }
+    //   } else {
+    //     this.setState({
+    //       inputFirst: 0,
+    //       inputSecond: 0,
+    //       result: 0
+    //     });
+    //   }
     }
     render () {
       return (
