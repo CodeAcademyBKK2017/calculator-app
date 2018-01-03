@@ -13,10 +13,10 @@ export default class App extends Component {
   }
   state = this.initialstate
   changeInput1 = (text) => {
-    this.setState({value1: text.replace(/[^0-9\.]/g, '')});
+    this.setState({value1: text.replace(/[^0-9.]/g, '')});
   }
   changeInput2 = (text) => {
-    this.setState({value2: text.replace(/[^0-9\.]/g, '')});
+    this.setState({value2: text.replace(/[^0-9.]/g, '')});
   }
   reset=() => {
     this.setState(this.initialstate);

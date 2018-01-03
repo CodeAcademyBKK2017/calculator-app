@@ -77,7 +77,7 @@
     "prefer-const": 2,
     "no-duplicate-imports": 2,
     "no-whitespace-before-property": 2,
-    "no-useless-rename": 2,
+    "no-useless-rename": 0,
     "no-unreachable": 2,
     "camelcase": 2,
     "no-multiple-empty-lines": ["error", { "max": 1 }]
