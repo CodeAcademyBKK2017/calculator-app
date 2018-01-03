@@ -28,25 +28,61 @@ export default class App extends Component<{}> {
     two: 0,
     ru: 0
   }
-  onBoak = () => {
-    this.setState({
-      ru: (this.state.one * 1) + (this.state.two * 1)
-    });
-  }
-  onLob = () => {
-    this.setState({
-      ru: this.state.one - this.state.two
-    });
-  }
-  onBKon = () => {
-    this.setState({
-      ru: this.state.one * this.state.two
-    });
-  }
-  onBHarn = () => {
-    this.setState({
-      ru: this.state.one / this.state.two
-    });
+  // onBoak = () => {
+  //   this.setState({
+  //     ru: (this.state.one * 1) + (this.state.two * 1)
+  //   });
+  // }
+  // onLob = () => {
+  //   this.setState({
+  //     ru: this.state.one - this.state.two
+  //   });
+  // }
+  // onBKon = () => {
+  //   this.setState({
+  //     ru: this.state.one * this.state.two
+  //   });
+  // }
+  // onBHarn = () => {
+  //   this.setState({
+  //     ru: this.state.one / this.state.two
+  //   });
+  // }
+  onCal = (oper) => () => {
+    let result;
+    const one = this.state.one * 1;
+    const two = this.state.two * 1;
+    switch (oper) {
+    case '+' :
+      result = one + two;
+      this.setState({
+        ru: result
+      });
+      break;
+    case '-' :
+      result = one - two;
+      this.setState({
+        ru: result
+      });
+      break;
+    case '*' : 
+      result = one * two;
+      this.setState({
+        ru: result
+      });
+      break;
+    case '/' : 
+      result = one / two; 
+      this.setState({
+        ru: result
+      });      
+      break;
+    default :  
+      result = 0;
+      this.setState({
+        ru: result
+      });
+    }
   }
   onRe = () => {
     this.setState({
@@ -69,10 +105,10 @@ export default class App extends Component<{}> {
           <UselessTextInput in={this.state.two} out={this.pim2} />
         </View>
         <View style={styles.companentS}>
-          <TabInput nip='+' kod={this.onBoak}/>
-          <TabInput nip='-' kod={this.onLob}/>
-          <TabInput nip='*' kod={this.onBKon}/>
-          <TabInput nip='/' kod={this.onBHarn}/>
+          <TabInput nip='++' kod={this.onCal('+')}/>
+          <TabInput nip='--' kod={this.onCal('-')}/>
+          <TabInput nip='**' kod={this.onCal('*')}/>
+          <TabInput nip='//' kod={this.onCal('/')}/>
         </View>
         <View style={styles.companentR}>
           <TextInANest pon={this.state.ru}/>
