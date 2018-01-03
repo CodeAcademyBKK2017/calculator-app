@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import styles from './Result.style';
 import {
-  StyleSheet,
   Text,
   View
 } from 'react-native';
@@ -21,13 +21,6 @@ export default class Result extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  operBox: {
-    flexDirection: 'column',
-    margin: 10,
-    alignItems: 'center'
-  }
-});
 Result.propTypes = {
   total: PropTypes.number.isRequired
 };

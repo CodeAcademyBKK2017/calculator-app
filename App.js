@@ -8,8 +8,8 @@ import OperButton from './app/components/OperButton.component';
 import OperInput from './app/components/OperInput.component';
 import React, {Component} from 'react';
 import Result from './app/components/Result.component';
+import styles from './App.style';
 import {
-  StyleSheet,
   View
 } from 'react-native';
 
@@ -69,11 +69,3 @@ export default class App extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  }
-});

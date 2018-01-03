@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import styles from './OperButton.style';
 import {
-  StyleSheet,
   Text,
   TouchableOpacity,
   View
@@ -36,18 +36,6 @@ export default class OperButton extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  operBox: {
-    flexDirection: 'row',
-    margin: 10
-  },
-  bt: {
-    padding: 10,
-    margin: 3,
-    backgroundColor: '#eee',
-    borderRadius: 5
-  }
-});
 OperButton.propTypes = {
   onPlus: PropTypes.func.isRequired,
   onMinus: PropTypes.func.isRequired,

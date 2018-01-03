@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import styles from './OperInput.style.js';
 import {
-  StyleSheet,
   TextInput,
   View
 } from 'react-native';
@@ -14,6 +14,7 @@ export default class OperInput extends Component {
         <TextInput
           style={styles.operInput}
           onChangeText={this.props.Firstfn}
+          underlineColorAndroid='transparent'
           value={this.props.FirstText}
         />
         <TextInput
@@ -25,19 +26,6 @@ export default class OperInput extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  operBox: {
-    flexDirection: 'row',
-    margin: 10
-  },
-  operInput: {
-    height: 40,
-    width: '40%',
-    margin: 10,
-    borderColor: 'gray',
-    borderWidth: 1
-  }
-});
 OperInput.propTypes = {
   Firstfn: PropTypes.func.isRequired,
   Lastfn: PropTypes.func.isRequired,
