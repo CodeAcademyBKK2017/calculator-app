@@ -1,0 +1,11 @@
+2186a8443bd6731fa2e8458a83e7a7c4
+Object.defineProperty(exports,"__esModule",{value:true});var cov_1ici83a4on=function(){var path='/Users/suphawutpitirit/project/calculator/app/components/operatorInputs/OparatorInput.style.js',hash='8ac28b91d40f06389702afc8fde963eeefce74be',global=new Function('return this')(),gcv='__coverage__',coverageData={path:'/Users/suphawutpitirit/project/calculator/app/components/operatorInputs/OparatorInput.style.js',statementMap:{},fnMap:{},branchMap:{},s:{},f:{},b:{},_coverageSchema:'332fd63041d2c1bcb487cc26dd0d5f7d97098a6c'},coverage=global[gcv]||(global[gcv]={});if(coverage[path]&&coverage[path].hash===hash){return coverage[path];}coverageData.hash=hash;return coverage[path]=coverageData;}();var _reactNative=require('react-native');exports.default=
+
+_reactNative.StyleSheet.create({
+input:{
+width:'30%',
+fontSize:50,
+alignItems:'center',
+backgroundColor:'#fff',
+borderWidth:1}});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk9wYXJhdG9ySW5wdXQuc3R5bGUuanMiXSwibmFtZXMiOlsiY3JlYXRlIiwiaW5wdXQiLCJ3aWR0aCIsImZvbnRTaXplIiwiYWxpZ25JdGVtcyIsImJhY2tncm91bmRDb2xvciIsImJvcmRlcldpZHRoIl0sIm1hcHBpbmdzIjoieXJCQUFBLHlDOztBQUVlLHdCQUFXQSxNQUFYLENBQWtCO0FBQy9CQyxNQUFPO0FBQ0xDLE1BQU8sS0FERjtBQUVMQyxTQUFVLEVBRkw7QUFHTEMsV0FBWSxRQUhQO0FBSUxDLGdCQUFpQixNQUpaO0FBS0xDLFlBQWEsQ0FMUixDQUR3QixDQUFsQixDIiwiZmlsZSI6Ik9wYXJhdG9ySW5wdXQuc3R5bGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1N0eWxlU2hlZXR9IGZyb20gJ3JlYWN0LW5hdGl2ZSc7XG5cbmV4cG9ydCBkZWZhdWx0IFN0eWxlU2hlZXQuY3JlYXRlKHtcbiAgaW5wdXQ6IHtcbiAgICB3aWR0aDogJzMwJScsXG4gICAgZm9udFNpemU6IDUwLFxuICAgIGFsaWduSXRlbXM6ICdjZW50ZXInLFxuICAgIGJhY2tncm91bmRDb2xvcjogJyNmZmYnLFxuICAgIGJvcmRlcldpZHRoOiAxXG4gIH1cbn0pOyJdfQ==

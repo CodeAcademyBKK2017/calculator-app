@@ -13,8 +13,8 @@ import {View} from 'react-native';
 
 export default class BaseApp extends Component {
   state = {
-    Firstnum: 0,
-    Secondnum: 0,
+    Firstnum: '',
+    Secondnum: '',
     result: 0
   }
 
@@ -29,8 +29,8 @@ export default class BaseApp extends Component {
 
   _clearResultFunc = () => {
     this.setState({
-      Firstnum: 0,
-      Secondnum: 0,
+      Firstnum: '',
+      Secondnum: '',
       result: 0
     });
   }
@@ -46,11 +46,11 @@ export default class BaseApp extends Component {
   }
 
   _multiplyOparateFunc = () => {
-    const rs = this.state.Firstnum * this.state.Secondnum; 
+    const rs = this.state.Firstnum * this.state.Secondnum;
     this.setState({result: rs});
   }
 
-  _multiplyOparateFunc = () => {
+  _divideOparateFunc = () => {
     const rs = this.state.Firstnum / this.state.Secondnum; 
     this.setState({result: rs});
   }
@@ -66,7 +66,7 @@ export default class BaseApp extends Component {
           <BTN oprStr='+' oparate={this._plusOparateFunc}/>
           <BTN oprStr='-' oparate={this._minusOparateFunc}/>
           <BTN oprStr='x' oparate={this._multiplyOparateFunc}/>
-          <BTN oprStr='÷' oparate={this._multiplyOparateFunc}/>
+          <BTN oprStr='÷' oparate={this._divideOparateFunc}/>
         </View>
         <View style={Styles.result}>
           <Result clear={this._clearResultFunc} result={this.state.result}/>
