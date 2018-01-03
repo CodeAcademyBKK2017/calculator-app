@@ -24,7 +24,6 @@ export default class Index extends Component {
       } else {
         this.setState({inputFirst: this.state.inputFirst});
       }
-      
     }
     onInputSecond = (value) => {
       if (this.isNumeric(value) || value === '') {
@@ -32,9 +31,7 @@ export default class Index extends Component {
       } else {
         this.setState({inputSecond: this.state.inputSecond});
       }
-      
     }
-
     isNumeric = (n) => !isNaN(parseFloat(n)) && isFinite(n)
     calResult = (oper) => () => {
       if (this.isNumeric(this.state.inputFirst) && this.isNumeric(this.state.inputSecond)) {
@@ -76,4 +73,3 @@ export default class Index extends Component {
       );
     }
 }
-
