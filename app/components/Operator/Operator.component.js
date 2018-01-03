@@ -3,10 +3,11 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+import noop from 'lodash/noop';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
-//   Platform,
+  // Platform,
   StyleSheet,
   Text,
   TouchableOpacity,  
@@ -50,6 +51,13 @@ export default class Operator extends Component {
     );
   }
 }
+
+Operator.propTypes = {
+  calResult: PropTypes.func
+};
+Operator.defaultProps = {
+  calResult: noop
+};
 
 const styles = StyleSheet.create({
   container: {

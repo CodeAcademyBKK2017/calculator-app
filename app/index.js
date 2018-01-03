@@ -15,8 +15,8 @@ import {
 export default class Index extends Component {
     state = {
       inputFirst: '',
-      inputSecond: 0,
-      result: 0
+      inputSecond: '',
+      result: ''
     }
     onInputFirst = (value) => {
       if (this.isNumeric(value) || value === '') {

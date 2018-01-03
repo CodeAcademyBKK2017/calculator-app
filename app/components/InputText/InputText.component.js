@@ -3,12 +3,13 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+import noop from 'lodash/noop';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
-//   Platform,
+  // Platform,
   StyleSheet,
-  //   Text,
+  // Text,
   TextInput,
   View
 } from 'react-native';
@@ -38,6 +39,19 @@ export default class InputText extends Component {
     );
   }
 }
+
+InputText.propTypes = {
+  onInputFirst: PropTypes.func,
+  onInputSecond: PropTypes.func,
+  inputFirst: PropTypes.string,
+  inputSecond: PropTypes.string
+};
+InputText.defaultProps = {
+  onInputFirst: noop,
+  onInputSecond: noop,
+  inputFirst: '',
+  inputSecond: ''
+};
 
 const styles = StyleSheet.create({
   container: {
