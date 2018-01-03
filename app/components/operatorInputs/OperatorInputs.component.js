@@ -18,7 +18,8 @@ export default class OPINPUT extends Component {
         value={val} 
         style={Styles.input} 
         onChangeText={changeState} 
-        keyboardType='numeric'/>
+        keyboardType='numeric'
+        underlineColorAndroid='rgba(0,0,0,0)'/>
     );
   }
 }
