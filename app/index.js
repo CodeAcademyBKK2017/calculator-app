@@ -44,7 +44,6 @@ export default class App extends Component {
     }
     this.setState({result: result});
   }
-  // Please use
   render () {
     return (
       <View style={styles.container}>
