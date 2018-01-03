@@ -1,0 +1,3 @@
+rootProject.name = 'simpleCal'
+
+include ':app'
