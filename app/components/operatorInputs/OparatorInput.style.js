@@ -6,6 +6,7 @@ export default StyleSheet.create({
     fontSize: 50,
     alignItems: 'center',
     backgroundColor: '#fff',
-    borderWidth: 1.5
+    borderWidth: 1.5,
+    textAlign: 'center'
   }
 });

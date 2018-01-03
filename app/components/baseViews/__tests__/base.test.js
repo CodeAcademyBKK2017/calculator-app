@@ -41,27 +41,18 @@ describe('App', () => {
     expect(instance.state.result).toEqual(0);
   });
 
-  it('BaseView: plusOparateFunc must summation correct', () => {
+  it('BaseView: _oparetionCalc must summation correct', () => {
     expect(instance.state.result).toEqual(0);
-    instance._plusOparateFunc();
+    instance._oparetionCalc('+')();
     expect(instance.state.result).toEqual(4);
-  });
-
-  it('BaseView: minusOparateFunc must subtraction correct', () => {
+    instance._oparetionCalc('-')();
     expect(instance.state.result).toEqual(0);
-    instance._minusOparateFunc();
-    expect(instance.state.result).toEqual(0);
-  });
-
-  it('BaseView: multiplyOparateFunc must multiplying correct', () => {
-    expect(instance.state.result).toEqual(0);
-    instance._multiplyOparateFunc();
+    instance._oparetionCalc('x')();
     expect(instance.state.result).toEqual(4);
-  });
-  it('BaseView: divideOparateFunc must dividing correct', () => {
-    expect(instance.state.result).toEqual(0);
-    instance._divideOparateFunc();
+    instance._oparetionCalc('÷')();
     expect(instance.state.result).toEqual(1);
+    instance._oparetionCalc('')();
+    expect(instance.state.result).toEqual(4);
   });
 
 });

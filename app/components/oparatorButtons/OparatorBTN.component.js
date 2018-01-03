@@ -13,7 +13,7 @@ export default class OPBTN extends Component {
   render () {
     const {oprStr, oparate} = this.props;
     return (
-      <TouchableOpacity style={Styles.btn} onPress={oparate}>
+      <TouchableOpacity style={Styles.btn} onPress={oparate(oprStr)}>
         <Text>{oprStr}</Text>
       </TouchableOpacity>
     );

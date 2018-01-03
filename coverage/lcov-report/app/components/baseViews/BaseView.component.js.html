@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>14/14</span>
+        <span class='fraction'>21/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>9/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>8/8</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>14/14</span>
+        <span class='fraction'>21/21</span>
       </div>
     </div>
   </div>
@@ -120,7 +120,11 @@
 75
 76
 77
-78</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+78
+79
+80
+81
+82</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,44 +145,48 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">21x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -234,23 +242,27 @@ export default class BaseApp extends Component {
     });
   }
 &nbsp;
-  _plusOparateFunc = () =&gt; {
-    const rs = this.state.Firstnum + this.state.Secondnum; 
-    this.setState({result: rs});
-  }
-&nbsp;
-  _minusOparateFunc = () =&gt; {
-    const rs = this.state.Firstnum - this.state.Secondnum; 
-    this.setState({result: rs});
-  }
-&nbsp;
-  _multiplyOparateFunc = () =&gt; {
-    const rs = this.state.Firstnum * this.state.Secondnum;
-    this.setState({result: rs});
-  }
-&nbsp;
-  _divideOparateFunc = () =&gt; {
-    const rs = this.state.Firstnum / this.state.Secondnum; 
+  _oparetionCalc = (opr) =&gt; () =&gt; {
+    let rs;
+    const val1 = this.state.Firstnum; 
+    const val2 = this.state.Secondnum; 
+    switch (opr) {
+    case '+':
+      rs = val1 + val2;
+      break;
+    case '-':
+      rs = val1 - val2;  
+      break;
+    case 'x':
+      rs = val1 * val2; 
+      break;
+    case '÷':
+      rs = val1 / val2; 
+      break;
+    default:
+      rs = val1 + val2;
+      break;
+    }
     this.setState({result: rs});
   }
 &nbsp;
@@ -262,10 +274,10 @@ export default class BaseApp extends Component {
           &lt;Input val={this.state.Secondnum.toString()} changeState={this._setSecondnum}/&gt;
         &lt;/View&gt;
         &lt;View style={Styles.btnColoum}&gt;
-          &lt;BTN oprStr='+' oparate={this._plusOparateFunc}/&gt;
-          &lt;BTN oprStr='-' oparate={this._minusOparateFunc}/&gt;
-          &lt;BTN oprStr='x' oparate={this._multiplyOparateFunc}/&gt;
-          &lt;BTN oprStr='÷' oparate={this._divideOparateFunc}/&gt;
+          &lt;BTN oprStr='+' oparate={this._oparetionCalc}/&gt;
+          &lt;BTN oprStr='-' oparate={this._oparetionCalc}/&gt;
+          &lt;BTN oprStr='x' oparate={this._oparetionCalc}/&gt;
+          &lt;BTN oprStr='÷' oparate={this._oparetionCalc}/&gt;
         &lt;/View&gt;
         &lt;View style={Styles.result}&gt;
           &lt;Result clear={this._clearResultFunc} result={this.state.result}/&gt;
@@ -280,7 +292,7 @@ export default class BaseApp extends Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 03 2018 09:31:09 GMT+0700 (+07)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 03 2018 11:15:55 GMT+0700 (+07)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

@@ -35,23 +35,27 @@ export default class BaseApp extends Component {
     });
   }
 
-  _plusOparateFunc = () => {
-    const rs = this.state.Firstnum + this.state.Secondnum; 
-    this.setState({result: rs});
-  }
-
-  _minusOparateFunc = () => {
-    const rs = this.state.Firstnum - this.state.Secondnum; 
-    this.setState({result: rs});
-  }
-
-  _multiplyOparateFunc = () => {
-    const rs = this.state.Firstnum * this.state.Secondnum;
-    this.setState({result: rs});
-  }
-
-  _divideOparateFunc = () => {
-    const rs = this.state.Firstnum / this.state.Secondnum; 
+  _oparetionCalc = (opr) => () => {
+    let rs;
+    const val1 = this.state.Firstnum; 
+    const val2 = this.state.Secondnum; 
+    switch (opr) {
+    case '+':
+      rs = val1 + val2;
+      break;
+    case '-':
+      rs = val1 - val2;  
+      break;
+    case 'x':
+      rs = val1 * val2; 
+      break;
+    case '÷':
+      rs = val1 / val2; 
+      break;
+    default:
+      rs = val1 + val2;
+      break;
+    }
     this.setState({result: rs});
   }
 
@@ -63,10 +67,10 @@ export default class BaseApp extends Component {
           <Input val={this.state.Secondnum.toString()} changeState={this._setSecondnum}/>
         </View>
         <View style={Styles.btnColoum}>
-          <BTN oprStr='+' oparate={this._plusOparateFunc}/>
-          <BTN oprStr='-' oparate={this._minusOparateFunc}/>
-          <BTN oprStr='x' oparate={this._multiplyOparateFunc}/>
-          <BTN oprStr='÷' oparate={this._divideOparateFunc}/>
+          <BTN oprStr='+' oparate={this._oparetionCalc}/>
+          <BTN oprStr='-' oparate={this._oparetionCalc}/>
+          <BTN oprStr='x' oparate={this._oparetionCalc}/>
+          <BTN oprStr='÷' oparate={this._oparetionCalc}/>
         </View>
         <View style={Styles.result}>
           <Result clear={this._clearResultFunc} result={this.state.result}/>

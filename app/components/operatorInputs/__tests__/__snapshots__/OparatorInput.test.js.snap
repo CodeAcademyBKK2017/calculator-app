@@ -9,8 +9,9 @@ exports[`BaseView: renders correctly 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#fff",
-      "borderWidth": 1,
+      "borderWidth": 1.5,
       "fontSize": 50,
+      "textAlign": "center",
       "width": "30%",
     }
   }
